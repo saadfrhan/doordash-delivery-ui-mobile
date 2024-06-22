@@ -12,7 +12,7 @@ export default function OrderSummaryAccordion() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="py-4 max-md:pl-3.5">
-      <div className="flex justify-between w-full pr-[1.86rem]">
+      <div className="flex justify-between w-full pr-[1rem]">
         <div className="flex gap-5">
           <ShoppingCart className="w-6 h-6 text-muted" />
           <p className="font-medium">Order Summary (1 Items)</p>
