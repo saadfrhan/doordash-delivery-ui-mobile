@@ -72,7 +72,7 @@ export default function Home() {
         icon={SlTag}
         className="border-b"
       />
-      <div className="py-2">
+      <div className="py-2 px-4">
         <Price price={22.95} label="Subtotal" />
         <Price price={3.99} newPrice={0} priceInfo label="Delivery Fee" />
         <Price
@@ -84,7 +84,7 @@ export default function Home() {
       </div>
       <Price
         price={5.5}
-        className="border-t mb-20"
+        className="border-t mb-20 px-4"
         label="Dasher Tip"
         options={[4.5, 5.5, 6.5, "Other"]}
       />
