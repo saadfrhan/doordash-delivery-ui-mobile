@@ -33,14 +33,14 @@ export default function OrderSummaryAccordion() {
             </h3>
             <Button
               variant="secondary"
-              className="font-bold text-[16px] gap-2.5"
+              className="font-bold text-[16px] gap-2.5 mr-3"
             >
               <Plus /> Add more items
             </Button>
           </div>
           <div className="flex gap-2 w-full max-md:flex-col">
             <Image src={BurritoBowl} width={150} height={150} alt="Phone" />
-            <div className="flex flex-col gap-y-3">
+            <div className="flex flex-col gap-y-3 max-md:mr-2">
               <div className="flex gap-y-2 flex-col">
                 <p className="font-medium text-xl">Burrito Bowl</p>
                 <p className="text-muted font-medium truncate-2-lines overflow-hidden text-ellipsis">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
 
 const ttNorms = localFont({
@@ -36,7 +35,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ttNorms.className}>
-        <Toaster />
         {children}
       </body>
     </html>

@@ -14,7 +14,6 @@ import {
 import { Input } from "@/components/ui/input";
 import SelectComponent from "./select-component";
 import { useState } from "react";
-import { toast } from "sonner";
 
 export default function EditPhoneNumberDialog({
   children,
@@ -41,31 +40,13 @@ export default function EditPhoneNumberDialog({
     }
   };
 
-  const validateInput = (value: string) => {
-    let error = ""
-    console.log(value)
-    if (!value) error = "Required!"
-    else if (value.length < 14) error = "Invalid phone format. ex: (555) 555-5555";
-    else if (value.length !== 14) error = "Invalid phone format. ex: (555) 555-5555";
-
-    return {error};
-  };
-
-  const onSubmit = () => {
-    const isNumberValid = validateInput(phoneNumber).error;
-    if (isNumberValid) return toast.error(isNumberValid);
-    else {
-      toast.success("Phone number updated successfully!");
-    }
-  }
-
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>
-            <h2 className="scroll-m-20 text-3xl font-bold tracking-tight first:mt-0">
+            <h2 className="scroll-m-20 text-left text-3xl font-bold tracking-tight first:mt-0">
               Edit phone number
             </h2>
           </DialogTitle>
@@ -86,17 +67,18 @@ export default function EditPhoneNumberDialog({
               ]}
             />
             </div>
-            <div className="flex flex-col gap-y-1.5">
+            <div className="flex flex-col w-full gap-y-1.5">
               <p className="font-bold scroll-m-20 text-[16px] tracking-tight">Phone Number</p>
             <Input
               id="phoneNumber"
+              className="w-full"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(prev => normalizeInput(e.target.value, prev)!)}
             />
             </div>
           </div>
         </div>
-        <DialogFooter>
+        <DialogFooter className="flex gap-2 flex-row justify-end">
           <DialogClose>
             <Button
               type="submit"
@@ -111,7 +93,6 @@ export default function EditPhoneNumberDialog({
             variant="secondary"
             disabled={_phoneNumber.number === phoneNumber}
             className="font-bold"
-            onClick={onSubmit}
           >
             Continue
           </Button>
