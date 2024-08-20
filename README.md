@@ -1,9 +1,11 @@
 # Doordash Delivery Page (Mobile Design)
 
-## Mobile Preview
+## Preview
 
 <img src="/preview/mobile.gif" />
 
-## Desktop Preview
+## Created with
 
-<img src="/preview/pc.gif" />
+- [Next.js](https://nextjs.org/)/[React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Shadcn-ui](https://ui.shadcn.com/) & [Tailwind CSS](https://tailwindcss.com/)
